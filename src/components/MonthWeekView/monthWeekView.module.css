@@ -1,0 +1,21 @@
+.daysOfWeek {
+    display: flex;
+    padding-inline-start: 0;
+}
+
+.daysOfWeek > li {
+    list-style: none;
+    width: 75px;
+    font-weight: bold;
+}
+
+.container > ul > li {
+    list-style: none;
+}
+
+.monthDates {
+    display: grid;
+    grid-template-columns: repeat(7, 75px);
+    grid-template-rows: repeat(5, 100px);
+    padding-left: 0;
+}
