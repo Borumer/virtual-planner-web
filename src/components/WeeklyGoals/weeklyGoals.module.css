@@ -1,0 +1,11 @@
+.goal {
+    list-style-type: none;
+}
+
+.goal input[type="text"] {
+    background: none;
+    color: white;
+    font-size: 1em;
+    text-decoration: underline;
+    border: none;
+}
