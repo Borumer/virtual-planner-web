@@ -12,7 +12,7 @@ export default function Goal({text}) {
         <p className={goalMod.container}>
             <input type="text" value={goalDescription} onChange={handleGoalDescriptionChange} />
             <input type="checkbox" />
-            <button>X</button>
+            {/* <button>X</button> */}
         </p>
     );
 }
