@@ -1,12 +1,22 @@
 .container {
-    column-count: 2;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container h3 {
+    grid-row: 1;
+}
+
+.schoolWork {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.afterSchoolWork {
+    grid-row: 2;
+    grid-column: 2;
 }
 
 .container ul li {
     list-style-type: none;
-}
-
-.afterSchoolWork li input {
-    width: 500px;
-    padding: 1em;
 }

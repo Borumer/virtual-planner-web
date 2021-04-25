@@ -12,7 +12,7 @@ export default function WeeklyGoals(props) {
 
 	return (
 		<article>
-			<h1>GOALS AND TO-DO'S</h1>
+			<h3>Weekly Goals</h3>
 			<ul>
 				{goals.map(item => (
 					<li className={weeklyGoals.goal}><Goal goal={item} /></li>

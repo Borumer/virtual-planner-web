@@ -1,8 +1,9 @@
 import DayToDo from "../DayToDo/dayToDo";
+import dayToDoList from "./dayToDoList.module.css";
 
 export default function DayToDoList(props) {
 	return (
-		<section className="day-todo-list">
+		<section className={`day-todo-list ${dayToDoList.container}`}>
 			<h2>Daily To-Do</h2>
 			<ul>
 				<li key="1">

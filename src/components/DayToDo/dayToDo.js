@@ -1,6 +1,6 @@
-import DayAfterSchoolToDo from "./dayAfterSchoolToDo";
 import dayToDo from "./dayToDo.module.css";
 import { daysOfWeek } from "../../lib/Moment";
+import Goal from "../Goal/goal";
 
 /**
  *
@@ -43,51 +43,51 @@ export default function DayToDo({ dateStr = "" }) {
 			</h3>
 			<ul className={dayToDo.schoolwork}>
 				<li>
-					<DayAfterSchoolToDo
-						initialDesc={`Finish "The Great Gatsby" Constructed Response Outline`}
+					<Goal
+						goal={`Finish "The Great Gatsby" Constructed Response Outline`}
 					/>
 				</li>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Study for Biology Unit 9 Quiz" />
+					<Goal goal="Study for Biology Unit 9 Quiz" />
 				</li>
 				<li>
-					<DayAfterSchoolToDo
-						initialDesc={`Read pages 614-631 of "The New Economy" and "The New
+					<Goal
+						goal={`Read pages 614-631 of "The New Economy" and "The New
 					Culture`}
 					/>
 				</li>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Do a PopSugar Fitness workout" />
+					<Goal goal="Do a PopSugar Fitness workout" />
 				</li>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Polish C&CA beat for WIP" />
+					<Goal goal="Polish C&CA beat for WIP" />
 				</li>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Review polar coordinates" />
+					<Goal goal="Review polar coordinates" />
 				</li>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Review 5A grammar topics and vocabulary" />
+					<Goal goal="Review 5A grammar topics and vocabulary" />
 				</li>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Practice new Symphonic Band music" />
+					<Goal goal="Practice new Symphonic Band music" />
 				</li>
 			</ul>
 			<h3>After School</h3>
 			<ul className={dayToDo.afterSchoolWork}>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Test positional Kalman Filter" />
+					<Goal goal="Test positional Kalman Filter" />
 				</li>
 				<li>
-					<DayAfterSchoolToDo
-						initialDesc="Finish implementing Positional Kalman Filter with process
+					<Goal
+						goal="Finish implementing Positional Kalman Filter with process
 					noise"
 					/>
 				</li>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Test Velocity Kalman Filter" />
+					<Goal goal="Test Velocity Kalman Filter" />
 				</li>
 				<li>
-					<DayAfterSchoolToDo initialDesc="Implement velocity Kalman Filter" />
+					<Goal goal="Implement velocity Kalman Filter" />
 				</li>
 			</ul>
 		</article>

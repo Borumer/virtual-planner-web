@@ -1,7 +1,7 @@
 import { useState } from "react";
-import monthWeekView from "./monthWeekView.module.css";
+import monthCalendar from "./monthCalendar.module.css";
 
-export default function MonthWeekView(props) {
+export default function MonthCalendar(props) {
 	const daysOfWeek = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
 
 	const getMonthDates = daysInMonth => {
@@ -38,19 +38,19 @@ export default function MonthWeekView(props) {
 		).getDate();
 
 		return getPlaceholders(firstDayOfCurrentMonth).concat(
-			getMonthDates(lastDayOfCurrentMonth - firstDayOfCurrentMonth)
+			getMonthDates(lastDayOfCurrentMonth)
 		);
 	};
 
 	return (
-		<section className={monthWeekView.container}>
+		<section className={monthCalendar.container}>
 			<h2>April 2021</h2>
-			<ul className={monthWeekView.daysOfWeek}>
+			<ul className={monthCalendar.daysOfWeek}>
 				{daysOfWeek.map((item, index) => (
 					<li key={item.substring(0, 3)}><abbr>{item.substring(0, 1)}</abbr></li>
 				))}	
 			</ul>
-			<ul className={monthWeekView.monthDates}>
+			<ul className={monthCalendar.monthDates}>
 				{getMonthDatesWithPlaceholders().map(item => (
 					<li>{item}</li>
 				))}
