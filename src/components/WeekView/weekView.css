@@ -1,0 +1,14 @@
+.container {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: grid;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container .day-todo-list {
+    grid-row: 2;
+    grid-column: 1 / -1;
+}

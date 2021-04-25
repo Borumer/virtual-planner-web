@@ -43,18 +43,18 @@ export default function MonthWeekView(props) {
 	};
 
 	return (
-		<article className={monthWeekView.container}>
+		<section className={monthWeekView.container}>
 			<h2>April 2021</h2>
 			<ul className={monthWeekView.daysOfWeek}>
 				{daysOfWeek.map((item, index) => (
-					<li key={`${daysOfWeek[index]}`}>{item.substring(0, 1)}</li>
-				))}
+					<li key={item.substring(0, 3)}><abbr>{item.substring(0, 1)}</abbr></li>
+				))}	
 			</ul>
 			<ul className={monthWeekView.monthDates}>
 				{getMonthDatesWithPlaceholders().map(item => (
 					<li>{item}</li>
 				))}
 			</ul>
-		</article>
+		</section>
 	);
 }

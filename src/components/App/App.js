@@ -1,13 +1,11 @@
 import logo from '../../logo.svg';
 import './App.css';
-import MonthWeekView from "../MonthWeekView/monthWeekView";
+import WeekView from '../WeekView/weekView';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <MonthWeekView />
-      </header>
+      <WeekView />
     </div>
   );
 }

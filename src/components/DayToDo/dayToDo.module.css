@@ -1,0 +1,12 @@
+.container {
+    column-count: 2;
+}
+
+.container ul li {
+    list-style-type: none;
+}
+
+.afterSchoolWork li input {
+    width: 500px;
+    padding: 1em;
+}
