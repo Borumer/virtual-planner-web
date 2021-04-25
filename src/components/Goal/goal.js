@@ -1,8 +1,8 @@
 import { useState } from "react";
 import goalMod from "./goal.module.css";
 
-export default function Goal({goal}) {
-    const [goalDescription, setGoalDescription] = useState(goal);
+export default function Goal({text}) {
+    const [goalDescription, setGoalDescription] = useState(text);
 
     const handleGoalDescriptionChange = e => {
         setGoalDescription(e.target.value);

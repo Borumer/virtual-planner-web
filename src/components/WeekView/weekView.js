@@ -6,7 +6,7 @@ import "./weekView.css";
 export default function WeekView(props) {
 	return (
 		<main className="container">
-			<MonthCalendar />
+			<MonthCalendar week={1} />
 			<WeeklyGoals />
 			<DayToDoList />
 		</main>

@@ -1,21 +1,24 @@
+import { useFetch } from "../../lib/DataStore";
 import Goal from "../Goal/goal";
+import monthlyGoals from "./monthlyGoals.module.css";
 
 export default function MonthlyGoals(props) {
-    const monthlyGoals = [
-        "Finish Ambient Noise Remover & upload",
-        "Finish NHS application and submit",
-        "Send Wanderlust resume",
-        "Schedule Superworld interview",
-        "Submit full application to InstaHub",
-        "Read _To Kill A Mockingbird_"
-    ];
+	const goals = useFetch(
+		"http://localhost:8000/goal/monthly?format=json"
+	);
 
-    return (
-        <section>
-        <h3>Monthly Goals</h3>
-            <ul>
-                {monthlyGoals.map(item => <Goal goal={item} />)}
-            </ul>
-        </section>
-    );
+	return (
+		<section>
+			<h3>Monthly Goals</h3>
+			<ul>
+				{goals
+					? goals.map(item => (
+							<li className={monthlyGoals.goal} key={item.id}>
+								<Goal {...item} />
+							</li>
+					  ))
+					: ""}
+			</ul>
+		</section>
+	);
 }

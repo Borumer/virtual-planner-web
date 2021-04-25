@@ -1,23 +1,19 @@
+import { useEffect, useState } from "react";
+import { useFetch } from "../../lib/DataStore";
 import Goal from "../Goal/goal";
 import weeklyGoals from "./weeklyGoals.module.css";
 
 export default function WeeklyGoals(props) {
-	const goals = [
-		"Enroll in and pay for NYLF program",
-		"Order tennis team apparel",
-		"Finish Chapter 2 of Driver's Manual",
-		"Get good data for Ambient Noise Remover",
-		"Assemble hackathon team",
-	];
+	const goals = useFetch("http://localhost:8000/goal/weekly/?format=json");
 
 	return (
-		<article>
+		<section>
 			<h3>Weekly Goals</h3>
 			<ul>
-				{goals.map(item => (
-					<li className={weeklyGoals.goal}><Goal goal={item} /></li>
-				))}
+				{goals ? goals.map(item => (
+					<li className={weeklyGoals.goal}><Goal {...item} /></li>
+				)) : ""}
 			</ul>
-		</article>
+		</section>
 	);
 }
